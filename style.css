@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@300;400&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+:root {
+  --beige: #f3eed9;
+  --brown: #824936;
+  --dark-green: #222c2a;
+  --section-padding: 9rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1128px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+}
+
+.col + .col {
+  margin-left: 4rem;
+}
+
+.col50 {
+  width: 50%;
+}
+
+.hero__small-text {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  letter-spacing: 0.8rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.hero__large-text {
+  font-size: 6rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+}
+
+.heading-text {
+  font-size: 3.6rem;
+  padding-bottom: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+}
+
+.paragraph-text {
+  font-size: 2.1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.hero-text {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.text--brown {
+  color: var(--brown);
+}
+
+#hero {
+  display: flex;
+  align-items: center;
+  min-height: 660px;
+  background-color: var(--beige);
+}
+
+#quality-designs {
+  background-color: white;
+  padding: var(--section-padding) 0;
+}
+
+#made-custom {
+  background-color: var(--dark-green);
+  padding: var(--section-padding) 0;
+  color: white;
+}
+
+#created-with-care {
+  background-color: var(--brown);
+  padding: var(--section-padding) 0;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  #created-with-care * .row {
+    flex-direction: column-reverse;
+  }
+
+  .col50 {
+    width: 100%;
+  }
+
+  .col + .col {
+    margin-left: 0;
+  }
+
+  .section-img-padding {
+    padding-top: 4rem;
+  }
+}
